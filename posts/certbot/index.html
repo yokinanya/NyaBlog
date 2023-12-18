@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Certbot 申请证书以及续费 | 绫沫猫猫冲</title><meta name="author" content="星之谷绫沫"><meta name="copyright" content="星之谷绫沫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="安装过程跳过 申请证书通过DNS验证域名： 1certbot certonly -d *.yokinanya.icu --manual --preferred-challenges dns 按照提示在域名服务商处，添加对应的DNS TXT解析记录。配置好后按回车继续，如果是修改记录的话，建议等一个TTL的时间再按回车 续费自动续费： 1certbot renew 可以设置个定时任务： 11 1 *">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Certbot 申请证书以及续费 | 绫沫猫猫冲</title><meta name="author" content="星之谷绫沫"><meta name="copyright" content="星之谷绫沫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="安装过程跳过 申请证书通过DNS验证域名： 1certbot certonly -d *.yokinanya.icu --manual --preferred-challenges dns 按照提示在域名服务商处，添加对应的DNS TXT解析记录。配置好后按回车继续，如果是修改记录的话，建议等一个TTL的时间再按回车 续费自动续费： 1certbot renew 可以设置个定时任务： 11 1 *">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Certbot 申请证书以及续费">
 <meta property="og:url" content="http://blog.yokinanya.icu/posts/certbot/index.html">
@@ -23,7 +23,7 @@
     noSupport: '浏览器不支持'
   },
   relativeDate: {
-    homepage: false,
+    homepage: true,
     post: false
   },
   runtime: '',
@@ -129,7 +129,7 @@
       win.activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
         }
       }
       const t = saveToLocal.get('theme')

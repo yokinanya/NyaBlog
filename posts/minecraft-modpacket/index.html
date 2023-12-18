@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Minecraft Fabric 生电向整合包 | 绫沫猫猫冲</title><meta name="author" content="星之谷绫沫"><meta name="copyright" content="星之谷绫沫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="简介这是一个Minecraft整合包合集页面，包含从1.18.2起由我打包的各类整合包，以生电向mod为主整合包一般都会包含以下mod，无特殊情况不再重复描述：   展开mod列表      mod名称 下载地址    AppleSkin Curseforge &#x2F; Modrinth   Architectury Curseforge &#x2F; Modrinth   Auth Me C">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Minecraft Fabric 生电向整合包 | 绫沫猫猫冲</title><meta name="author" content="星之谷绫沫"><meta name="copyright" content="星之谷绫沫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="简介这是一个Minecraft整合包合集页面，包含从1.18.2起由我打包的各类整合包，以生电向mod为主整合包一般都会包含以下mod，无特殊情况不再重复描述：   展开mod列表      mod名称 下载地址    AppleSkin Curseforge &#x2F; Modrinth   Architectury Curseforge &#x2F; Modrinth   Auth Me C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Minecraft Fabric 生电向整合包">
 <meta property="og:url" content="http://blog.yokinanya.icu/posts/minecraft-modpacket/index.html">
@@ -24,7 +24,7 @@
     noSupport: '浏览器不支持'
   },
   relativeDate: {
-    homepage: false,
+    homepage: true,
     post: false
   },
   runtime: '',
@@ -130,7 +130,7 @@
       win.activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
         }
       }
       const t = saveToLocal.get('theme')
