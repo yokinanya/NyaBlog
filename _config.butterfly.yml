@@ -11,6 +11,7 @@ nav:
 menu:
   首页: /
   提问的智慧: /How-To-Ask-Questions
+  周表: /calendar
   归档: /archives/
   # 标签: /tags/ || fas fa-tags
   # 分类: /categories/ || fas fa-folder-open
@@ -37,7 +38,7 @@ social:
   iconfont icon-github-fill: https://github.com/yokinanya || Github || '#24292e'
   iconfont icon-bilibili-fill: https://space.bilibili.com/30231981 || 哔哩哔哩 || '#00a0d8'
   iconfont icon-youtube-fill: https://www.youtube.com/@yokinanya || Youtube || '#ff0000'
-  iconfont icon-qq-fill: https://www.youtube.com/@yokinanya || QQ群 || '#24292e'
+  iconfont icon-discord-fill: https://discord.gg/ZAQYe3xgyj || Discord || '#24292e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
 # Image (圖片設置)
