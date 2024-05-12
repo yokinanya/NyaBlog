@@ -2,7 +2,7 @@
 title: 'Minecraft Fabric 生电向整合包'
 date: 2023-07-03 16:14:38
 updated: 2023-12-18 17:23:03
-tags: [minecraft]
+tags: ['minecraft']
 ---
 
 # 简介
