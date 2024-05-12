@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>GPG密钥的配置以及在Git中的使用</title>
+      <link href="/posts/git-with-gpg/"/>
+      <url>/posts/git-with-gpg/</url>
+      
+        <content type="html"><![CDATA[<h1 id="安装与配置GPG"><a href="#安装与配置GPG" class="headerlink" title="安装与配置GPG"></a>安装与配置GPG</h1><blockquote><p>虽然Git自带GPG，但这里仍单独安装了GPG程序</p></blockquote><p>Windows 用户可下载 <a href="https://gpg4win.org/download.html">Gpg4Win</a>，Linux&#x2F;macOS 用户使用对应包管理软件安装即可。</p><p>安装完成后在Git配置gpg路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global gpg.program <span class="string">&quot;C:\Program Files (x86)\GnuPG\bin\gpg.exe&quot;</span></span><br></pre></td></tr></table></figure><h1 id="创建与设置密钥"><a href="#创建与设置密钥" class="headerlink" title="创建与设置密钥"></a>创建与设置密钥</h1><p>建议参考 <a href="https://editst.com/2022/canokey-guide/#OpenPGP">https://editst.com/2022/canokey-guide/#OpenPGP</a> 生成并配置密钥，并且建议对密钥进行备份。如果有需要可以把密钥导入到智能卡内（如Canokey&#x2F;Yubikey），如果没有智能卡，在完成备份密钥后可以继续之后的操作。</p><p>需要注意：<strong>主密钥中的用户名，邮箱地址，需要和Github或其他Git平台中使用的一致</strong>，Comment仅为备注，可以留空</p><h1 id="在Git中配置密钥"><a href="#在Git中配置密钥" class="headerlink" title="在Git中配置密钥"></a>在Git中配置密钥</h1><p>在Git中添加密钥</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.signingkey &lt;GPG key ID&gt; <span class="comment"># GPG key ID是子密钥中用于签名的密钥</span></span><br></pre></td></tr></table></figure><p>之后在<code>git commit</code>时使用<code>-S</code>参数即可使用gpg进行签名。也可以在配置中配置自动gpg签名，此处不建议开启全局选项，因为有的脚本可能会使用 <code>git am</code> 之类的涉及到 commit 的命令，如果全局开启的话会导致问题。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config commit.gpgsign <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>如果提交到 GitHub，前往 <a href="https://github.com/settings/keys">GitHub SSH and GPG keys</a> 添加公钥。此处添加后，可以直接通过对应 GitHub ID 来获取公钥：<a href="https://github.com/">https://github.com/</a>&lt;yourid&gt;.gpg</p><p>文章有参考以下内容：<br><a href="https://kiyamou.github.io/2019/06/06/git-use-0/">GPG密钥的配置与Git的使用</a><br><a href="https://editst.com/2022/canokey-guide">Canokey 指南：OTP，FIDO2，PGP 与 PIV</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> gpg </tag>
+            
+            <tag> canokey </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>停播通知</title>
       <link href="/posts/20240323/"/>
       <url>/posts/20240323/</url>
