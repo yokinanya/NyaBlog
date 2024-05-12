@@ -11,7 +11,7 @@ nav:
 menu:
   首页: /
   提问的智慧: /How-To-Ask-Questions
-  周表: /calendar
+  # 周表: /calendar
   归档: /archives/
   # 标签: /tags/ || fas fa-tags
   # 分类: /categories/ || fas fa-folder-open
