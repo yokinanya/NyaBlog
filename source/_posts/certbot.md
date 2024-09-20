@@ -20,7 +20,7 @@ Certbot 团队建议使用 Snap 安装 Certbot ，以避免其他包管理系统
 sudo apt update
 sudo apt install snapd
 sudo snap install --classic certbot
-# 创建软链接，以确保certbot命令可用
+# 创建软链接，以确保certbot命令可用，如果certbot命令已经能用就不用创建软链接
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
