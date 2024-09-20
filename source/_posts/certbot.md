@@ -1,22 +1,9 @@
 ---
 title: "用Certbot自动获取Let's Encrypt证书"
 date: 2023-07-03 21:40:29
-updated: 2024-05-12 14:26:28
+updated: 2024-09-20 10:34:11
 tags: []
 ---
-
-# Let’s Encrypt
-Let’s Encrypt 是一家全球性的证书颁发机构（CA），作为一个非营利性组织，它的任务是通过推广 HTTPS 来创建一个更加安全和尊重隐私的 Web 环境。Let’s Encrypt 提供了免费的 SSL 证书供每个人使用。
-
-Let’s Encrypt 使用自动化证书管理环境（ACME）协议来验证域名控制权以及颁发证书，使用 Certbot 首次连接 Let’s Encrypt 服务器时会要求输入邮箱等信息来自动创建账户，帐户 ID 可以在 /etc/letsencrypt/accounts/acme-v02.api.letsencrypt.org/directory/<ID\> 路径中找到，如果在使用中遇到问题，可以提供账户 ID 信息进行反馈。
-
-# SSL证书类型
-目前主流的 SSL 证书有以下三种：
-
-域名验证型（DV）证书：通过验证域名所有权即可签发证书，只验证网站域名所有权，适合个人和小微企业申请，能起到加密传输的作用，但是证书中无法显示企业信息。
-组织验证型（OV）证书：通过验证域名所有权和申请企业的真实身份信息才能签发证书，适合中型企业和互联网业务申请，能通过证书查看到企业相关信息。
-扩展验证型（EV）证书：在 OV 证书的基础上额外验证企业的其他相关信息，比如 GoDaddy 会在在授予企业 EV 证书前验证企业是否符合以下条件：已合法注册、目前正常运营、位于所列地址、所列电话号码有效、拥有网站域名。多使用于银行、金融、证券、支付等高安全标准行业。
-Let’s Encrypt 提供的是域名验证型（DV）证书，不提供组织验证型（OV）或扩展验证型（EV）证书。
 
 # 安装Certbot
 
@@ -40,10 +27,10 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 # 申请证书
 通过DNS验证域名：
 ```bash
-certbot certonly -d *.yokinanya.icu --manual --preferred-challenges dns
+certbot certonly -d *.yourdomain.com --manual --preferred-challenges dns
 ```
 按照提示在域名服务商处，添加对应的DNS TXT解析记录。
-配置好后按回车继续，建议先使用dig查询解析是否生效，或者前往<https://toolbox.googleapps.com/apps/dig/?lang=zh-CN>查询
+配置好后按回车继续，建议先查询解析是否生效，可以用<https://toolbox.googleapps.com/apps/dig/?lang=zh-CN>查询
 
 然后在nginx中的对应位置添加SSL证书配置并开启ssl
 
@@ -52,21 +39,22 @@ listen 443 ssl http2;
 listen [::]:443 ssl http2;
 server_name www.yokinanya.icu;
 
-ssl_certificate /etc/letsencrypt/live/yokinanya.icu/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/yokinanya.icu/privkey.pem;
+ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
 ```
 
-# 续费
-自动续费：
+# 续签
+自动续签：
 ```bash
-certbot renew
-```
-可以设置个定时任务：
-```bash
-1 1 */1 * * certbot renew > /var/log/crontab/certbot
+certbot renew --force-renewal --post-hook "/usr/sbin/nginx -s reload"
 ```
 
 强制重签:
 ```bash
-certbot certonly --manual -d *.yokinanya.icu
+certbot certonly --manual -d *.yourdomain.com
+```
+
+如果在执行`certbot renew`时出现如下错误时，可以试试使用[这个脚本](https://github.com/al-one/certbot-auth-dnspod)(仅支持DNSPod)，使用其他服务商的可以自行寻找其他脚本
+```bash
+--manual --preferred-challenges dns --manual-auth-hook /path_to/certbot-auth-dnspod.sh
 ```
