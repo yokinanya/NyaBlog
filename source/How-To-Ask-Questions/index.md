@@ -2,6 +2,7 @@
 title: '提问的智慧'
 date: 2023-07-29 18:38:56
 tags: []
+copyright: false
 ---
 **How To Ask Questions The Smart Way**
 

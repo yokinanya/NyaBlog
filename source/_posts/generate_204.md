@@ -2,7 +2,10 @@
 title: '检测网络联通性&generate_204服务汇总'
 date: 2023-07-28 12:31:11
 tags: []
-copyright: false
+copyright_author: 李德银's blog
+copyright_author_href: https://imldy.cn/
+copyright_url: https://imldy.cn/posts/99d42f85
+copyright_info: 原文章并没有声明版权，本站默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。
 ---
 
 > 本网页转载至 <https://imldy.cn/posts/99d42f85> ，内容有删改

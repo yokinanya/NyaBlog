@@ -3,6 +3,7 @@ title: 'GPG密钥的配置以及在Git中的使用'
 date: 2024-05-12 14:26:37
 updated: 2024-05-12 14:26:37
 tags: ['git','gpg','canokey']
+copyright: false
 ---
 
 
@@ -34,7 +35,5 @@ git config commit.gpgsign true
 
 
 文章有参考以下内容：
-[GPG密钥的配置与Git的使用
-](https://kiyamou.github.io/2019/06/06/git-use-0/)
-[Canokey 指南：OTP，FIDO2，PGP 与 PIV
-](https://editst.com/2022/canokey-guide)
+[GPG密钥的配置与Git的使用](https://kiyamou.github.io/2019/06/06/git-use-0/)
+[Canokey 指南：OTP，FIDO2，PGP 与 PIV](https://editst.com/2022/canokey-guide)
