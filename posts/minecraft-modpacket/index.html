@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Minecraft Fabric 生电向整合包 | 绫沫猫猫冲</title><meta name="author" content="绫沫Yokina"><meta name="copyright" content="绫沫Yokina"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="简介这是一个Minecraft整合包合集页面，包含从1.18.2起由我打包的各类整合包，以生电向mod为主整合包一般都会包含以下mod，无特殊情况不再重复描述：   展开mod列表      mod名称 下载地址    AppleSkin Curseforge &#x2F; Modrinth   Architectury Curseforge &#x2F; Modrinth   Auth Me C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minecraft Fabric 生电向整合包">
+<meta property="og:url" content="http://blog.yokinanya.icu/posts/minecraft-modpacket/index.html">
+<meta property="og:site_name" content="绫沫猫猫冲">
+<meta property="og:description" content="简介这是一个Minecraft整合包合集页面，包含从1.18.2起由我打包的各类整合包，以生电向mod为主整合包一般都会包含以下mod，无特殊情况不再重复描述：   展开mod列表      mod名称 下载地址    AppleSkin Curseforge &#x2F; Modrinth   Architectury Curseforge &#x2F; Modrinth   Auth Me C">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png">
+<meta property="article:published_time" content="2023-07-03T08:14:38.000Z">
+<meta property="article:modified_time" content="2023-12-18T09:23:03.000Z">
+<meta property="article:author" content="绫沫Yokina">
+<meta property="article:tag" content="minecraft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Minecraft Fabric 生电向整合包",
+  "url": "http://blog.yokinanya.icu/posts/minecraft-modpacket/",
+  "image": "https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png",
+  "datePublished": "2023-07-03T08:14:38.000Z",
+  "dateModified": "2023-12-18T09:23:03.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "绫沫Yokina",
+      "url": "http://blog.yokinanya.icu/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/./img/favicon.png"><link rel="canonical" href="http://blog.yokinanya.icu/posts/minecraft-modpacket/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Minecraft Fabric 生电向整合包',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yokinanya/NyaBlog-Resource@master/css/heimu.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yokinanya/NyaBlog-Resource@master/css/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4378889_v8toy6dmx3m.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-color: #efefef;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/How-To-Ask-Questions"><span> 提问的智慧</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/bot/"><span> 星泠</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">绫沫猫猫冲</span></a><a class="nav-page-title" href="/"><span class="site-name">Minecraft Fabric 生电向整合包</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/How-To-Ask-Questions"><span> 提问的智慧</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/bot/"><span> 星泠</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Minecraft Fabric 生电向整合包</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-03T08:14:38.000Z" title="发表于 2023-07-03 16:14:38">2023-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-18T09:23:03.000Z" title="更新于 2023-12-18 17:23:03">2023-12-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/minecraft-modpacket/#post-comment"><span class="waline-comment-count" data-path="/posts/minecraft-modpacket/"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="container post-content" id="article-container"><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>这是一个Minecraft整合包合集页面，包含从1.18.2起由我打包的各类整合包，以生电向mod为主<br/><br>整合包一般都会包含以下mod，无特殊情况不再重复描述：</p>
+<details> <summary> 展开mod列表 </summary>
+
+<table>
+<thead>
+<tr>
+<th>mod名称</th>
+<th>下载地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AppleSkin</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/appleskin">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/EsAfCjCV">Modrinth</a></td>
+</tr>
+<tr>
+<td>Architectury</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/architectury-api">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/lhGA9TYQ">Modrinth</a></td>
+</tr>
+<tr>
+<td>Auth Me</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/auth-me">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/yjgIrBjZ">Modrinth</a></td>
+</tr>
+<tr>
+<td>AutoFish</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/autofish">Curseforge</a></td>
+</tr>
+<tr>
+<td>Bad Packets</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/badpackets">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/ftdbN0KK">Modrinth</a></td>
+</tr>
+<tr>
+<td>Better Beds</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/better-beds">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/kKwy3HU9">Modrinth</a></td>
+</tr>
+<tr>
+<td>CIT Resewn</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/cit-resewn">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/otVJckYQ">Modrinth</a></td>
+</tr>
+<tr>
+<td>Carpet Mod</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/carpet">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/TQTTVgYE">Modrinth</a></td>
+</tr>
+<tr>
+<td>Carpet Extra</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/carpet-extra">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/VX3TgwQh">Modrinth</a></td>
+</tr>
+<tr>
+<td>Carpet TCTC Addition</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/carpet-tctc-addition">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/vbBQ6dVH">Modrinth</a></td>
+</tr>
+<tr>
+<td>Carpet TIS Addition</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/carpet-tis-addition">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/jE0SjGuf">Modrinth</a></td>
+</tr>
+<tr>
+<td>Chat Heads</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/chat-heads">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/Wb5oqrBJ">Modrinth</a></td>
+</tr>
+<tr>
+<td>Cloth Config API</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/cloth-config">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/9s6osm5g">Modrinth</a></td>
+</tr>
+<tr>
+<td>Continuity</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/continuity">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/1IjD5062">Modrinth</a></td>
+</tr>
+<tr>
+<td>CustomSkinLoader</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/customskinloader">Curseforge</a></td>
+</tr>
+<tr>
+<td>Enhanced Block Entities</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/enhanced-block-entities">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/OVuFYfre">Modrinth</a></td>
+</tr>
+<tr>
+<td>Fabric Api</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/P7dR8mSH">Modrinth</a></td>
+</tr>
+<tr>
+<td>Fabric Language Kotlin</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/Ha28R6CL">Modrinth</a></td>
+</tr>
+<tr>
+<td>FerriteCore</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/uXXizFIs">Modrinth</a></td>
+</tr>
+<tr>
+<td>IMBlocker</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/imblockerfabric">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/752GQt04">Modrinth</a></td>
+</tr>
+<tr>
+<td>Indium</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/indium">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/Orvt0mRa">Modrinth</a></td>
+</tr>
+<tr>
+<td>Inventory Profiles Next</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/O7RBXm3n">Modrinth</a></td>
+</tr>
+<tr>
+<td>Iris Shaders</td>
+<td><a target="_blank" rel="noopener" href="https://modrinth.com/mod/YL57xq9U">Modrinth</a> &#x2F; <a target="_blank" rel="noopener" href="https://irisshaders.dev/download">官网</a></td>
+</tr>
+<tr>
+<td>Item Scroller</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/item-scroller">Curseforge</a></td>
+</tr>
+<tr>
+<td>Litematica</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/litematica">Curseforge</a></td>
+</tr>
+<tr>
+<td>MaLiLib</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/malilib">Curseforge</a></td>
+</tr>
+<tr>
+<td>MagicLib</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/magiclib">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/mv1zH6ln">Modrinth</a></td>
+</tr>
+<tr>
+<td>Masa Gadget</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/masa-gadget">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/SFO4Ca80">Modrinth</a></td>
+</tr>
+<tr>
+<td>MiniHUD</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/minihud">Curseforge</a></td>
+</tr>
+<tr>
+<td>Mod Menu</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/modmenu">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/mOgUt4GM">Modrinth</a></td>
+</tr>
+<tr>
+<td>More Statistics</td>
+<td><a target="_blank" rel="noopener" href="https://modrinth.com/mod/EhoUIqvO">Modrinth</a></td>
+</tr>
+<tr>
+<td>oh my minecraft client</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Nyan-Work/oh-my-minecraft-client">Github</a></td>
+</tr>
+<tr>
+<td>Plusls Carpet Addition</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Nyan-Work/plusls-carpet-addition">Github</a></td>
+</tr>
+<tr>
+<td>Reese’s Sodium Options</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/reeses-sodium-options">Curseforge</a> <a target="_blank" rel="noopener" href="https://modrinth.com/mod/Bh37bMuy">Modrinth</a></td>
+</tr>
+<tr>
+<td>Roughly Enough Items</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/nfn13YXA">Modrinth</a></td>
+</tr>
+<tr>
+<td>Screenshot to Clipboard</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/screenshot-to-clipboard-fabric">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/1KiJRrTg">Modrinth</a></td>
+</tr>
+<tr>
+<td>Sodium</td>
+<td><a target="_blank" rel="noopener" href="https://modrinth.com/mod/AANobbMI">Modrinth</a></td>
+</tr>
+<tr>
+<td>Sodium Extra</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/sodium-extra">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/PtjYWJkn">Modrinth</a></td>
+</tr>
+<tr>
+<td>Starlight</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/starlight">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/H8CaAYZC">Modrinth</a></td>
+</tr>
+<tr>
+<td>TweakerMore</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/tweakermore">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/GBeCx05I">Modrinth</a></td>
+</tr>
+<tr>
+<td>Tweakeroo</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/tweakeroo">Curseforge</a></td>
+</tr>
+<tr>
+<td>TweakMyClient</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/tweakmyclient">Curseforge</a></td>
+</tr>
+<tr>
+<td>Xaero’s Minimap</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/1bokaNcj">Modrinth</a></td>
+</tr>
+<tr>
+<td>Xaero’s World Map</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/NcUtCpym">Modrinth</a></td>
+</tr>
+<tr>
+<td>libIPN</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/libipn">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/libipn">Modrinth</a></td>
+</tr>
+<tr>
+<td>spark</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/spark">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/l6YH9Als">Modrinth</a></td>
+</tr>
+<tr>
+<td>WTHIT</td>
+<td><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/wthit">Curseforge</a> &#x2F; <a target="_blank" rel="noopener" href="https://modrinth.com/mod/6AQIaxuO">Modrinth</a></td>
+</tr>
+</tbody></table>
+</details>
+
+<p><br/>1.20.1 起追加mod</p>
+<p><a target="_blank" rel="noopener" href="https://modrinth.com/mod/G1epq3jN">AdvancementInfo</a><br><a target="_blank" rel="noopener" href="https://github.com/charassss/tin3o">TIN3O</a><br><a target="_blank" rel="noopener" href="https://modrinth.com/mod/pGbwwB5d">LetMeClickAndSend</a></p>
+<h1 id="1-18-2-Vanilla"><a href="#1-18-2-Vanilla" class="headerlink" title="1.18.2 Vanilla"></a>1.18.2 Vanilla</h1><blockquote>
+<p>整合包为原版分支<br>更新日期：2023-07-06</p>
+</blockquote>
+<p>此版本使用了 <a target="_blank" rel="noopener" href="https://modrinth.com/mod/K8pn1qHf">OAuth</a> 替代了 Auth Me</p>
+<h1 id="1-18-2-Create"><a href="#1-18-2-Create" class="headerlink" title="1.18.2 Create"></a>1.18.2 Create</h1><blockquote>
+<p>整合包为机械动力分支<br>更新日期：2023-07-06</p>
+</blockquote>
+<p>在 1.18.2 Vanilla 的基础上增加了 <a target="_blank" rel="noopener" href="https://modrinth.com/mod/create-fabric">机械动力</a>、<a target="_blank" rel="noopener" href="https://modrinth.com/mod/4EakbH8e">农夫乐事</a>、<a target="_blank" rel="noopener" href="https://modrinth.com/mod/5aaWibi9">Trinkets</a>及其附属mod<a target="_blank" rel="noopener" href="https://modrinth.com/mod/b5GyyYkp">不死图腾插槽</a> <a target="_blank" rel="noopener" href="https://modrinth.com/mod/mSQF1NpT">鞘翅插槽</a></p>
+<h1 id="1-19-4"><a href="#1-19-4" class="headerlink" title="1.19.4"></a>1.19.4</h1><blockquote>
+<p>整合包为原版分支<br>发布日期：2023-04-04</p>
+</blockquote>
+<p>整合包有部分mod是我自行添加汉化文件的，1.19.4整合包不存在机械动力分支</p>
+<h1 id="1-20-1-Vanilla"><a href="#1-20-1-Vanilla" class="headerlink" title="1.20.1 Vanilla"></a>1.20.1 Vanilla</h1><blockquote>
+<p>整合包为原版分支<br>发布日期：2023-08-23</p>
+</blockquote>
+<p>整合包有部分mod使用了第三方分支版本</p>
+<h1 id="1-20-1-Create"><a href="#1-20-1-Create" class="headerlink" title="1.20.1 Create"></a>1.20.1 Create</h1><blockquote>
+<p>整合包为机械动力分支<br>发布日期：2023-08-25</p>
+</blockquote>
+<p>在 1.20.1 Vanilla 的基础上增加了 <a target="_blank" rel="noopener" href="https://modrinth.com/mod/create-fabric">机械动力</a>、<a target="_blank" rel="noopener" href="https://modrinth.com/mod/4EakbH8e">农夫乐事</a>、<a target="_blank" rel="noopener" href="https://modrinth.com/mod/5aaWibi9">Trinkets</a>及其附属mod<a target="_blank" rel="noopener" href="https://modrinth.com/mod/b5GyyYkp">不死图腾插槽</a> <a target="_blank" rel="noopener" href="https://modrinth.com/mod/mSQF1NpT">鞘翅插槽</a></p>
+<p>已知bug：</p>
+<ul>
+<li>实体方块在Sodium 5.0下无法正常显示 <a target="_blank" rel="noopener" href="https://github.com/Fabricators-of-Create/Create/issues/1039">#1039</a></li>
+<li>与starlight冲突会导致游戏崩溃 <a target="_blank" rel="noopener" href="https://github.com/Fabricators-of-Create/Create/issues/1041">#1041</a></li>
+</ul>
+<p>临时解决方案：</p>
+<ul>
+<li>暂时使用Sodium 4.0版本</li>
+<li>删除整合包内starlight</li>
+</ul>
+<h1 id="启动器"><a href="#启动器" class="headerlink" title="启动器"></a>启动器</h1><p>整合包内可能没有附带启动器，或者附带了jar格式的HMCL启动器，用Linux&#x2F;MacOS的应该熟悉，在Windows下如果正确配置了环境变量是可以直接双击运行的。如果需要.exe格式的HMLC启动器可以前往<a target="_blank" rel="noopener" href="https://hmcl.huangyuhui.net/">HMCL官网</a>下载。或者你想用PCL2、BakaXL，可以把游戏目录自行添加到对应启动器内。<br><strong>注意：不是导入整合包，而是添加已有文件夹</strong></p>
+<h1 id="光影"><a href="#光影" class="headerlink" title="光影"></a>光影</h1><p>所有整合包均不会使用Optifine，使用光影需要注意光影是否有适配Iris</p>
+<h1 id="第一次启动"><a href="#第一次启动" class="headerlink" title="第一次启动"></a>第一次启动</h1><p>游戏第一次启动需要联网下载游戏资源文件，如果需要在离线环境下游玩，需要提前在一台联网的电脑下载资源文件再复制到离线的电脑上。</p>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><table>
+<thead>
+<tr>
+<th>下载源</th>
+<th>文件服务器</th>
+<th>大陆&#x2F;海外</th>
+<th>正式版</th>
+<th>预览版</th>
+<th>客户端</th>
+<th>服务器端</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://share.weiyun.com/PT0hKNFW">腾讯微云</a>(提取码：7e9ure)</td>
+<td>腾讯云</td>
+<td>大陆</td>
+<td>✓</td>
+<td>×</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=FpNvPiwKEBbBRHMvH8-M6Kp1WTB8L6W0">QQ群</a>(1067555292)</td>
+<td>腾讯云COS</td>
+<td>大陆</td>
+<td>✓</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://drivez.yokinanya.icu/Minecraft">绫沫猫猫冲下载站</a></td>
+<td>Onedrive国际版</td>
+<td>海外</td>
+<td>✓</td>
+<td>√</td>
+<td>√</td>
+<td>X</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://blog.yokinanya.icu">绫沫Yokina</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://blog.yokinanya.icu/posts/minecraft-modpacket/">http://blog.yokinanya.icu/posts/minecraft-modpacket/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://blog.yokinanya.icu" target="_blank">绫沫猫猫冲</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/minecraft/">minecraft</a></div><div class="post-share"><div class="social-share" data-image="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/posts/certbot/" title="用Certbot自动获取Let's Encrypt证书"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">用Certbot自动获取Let's Encrypt证书</div></div><div class="info-2"><div class="info-item-1">安装CertbotCertbot 团队建议使用 Snap 安装 Certbot ，以避免其他包管理系统上发行的 Cerbot 因为未及时更新而存在问题。 如果使用的是其他 Linux 发行版或者你使用的不是 Linux 可以查阅 certbot instructions，当然Certbot也可以通过 pip 安装，但并不建议使用该方式进行安装 下面以Ubuntu为例简单介绍一下Certbot的安装流程： 如果使用 apt、dnf 或 yum 等操作系统软件包管理器安装了任何 Certbot 软件包，应在安装 Certbot snap 之前删除它们，以确保运行 certbot 命令时使用的是 snap，而不是操作系统软件包管理器的安装。具体的命令视操作系统而定，常见的有 sudo apt-get remove certbot、sudo dnf remove certbot 或 sudo yum remove certbot。 123456# ubuntu可以直接通过apt安装snapsudo apt updatesudo apt install snapdsudo snap...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-18-2-Vanilla"><span class="toc-number">2.</span> <span class="toc-text">1.18.2 Vanilla</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-18-2-Create"><span class="toc-number">3.</span> <span class="toc-text">1.18.2 Create</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-19-4"><span class="toc-number">4.</span> <span class="toc-text">1.19.4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-20-1-Vanilla"><span class="toc-number">5.</span> <span class="toc-text">1.20.1 Vanilla</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-20-1-Create"><span class="toc-number">6.</span> <span class="toc-text">1.20.1 Create</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%99%A8"><span class="toc-number">7.</span> <span class="toc-text">启动器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%89%E5%BD%B1"><span class="toc-number">8.</span> <span class="toc-text">光影</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AF%E5%8A%A8"><span class="toc-number">9.</span> <span class="toc-text">第一次启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">10.</span> <span class="toc-text">下载</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 绫沫Yokina</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline.yokinanya.icu/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: true,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@2/dist/waline.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@2/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>绫沫猫猫冲</title><meta name="author" content="绫沫Yokina"><meta name="copyright" content="绫沫Yokina"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="绫沫猫猫冲">
+<meta property="og:url" content="http://blog.yokinanya.icu/index.html">
+<meta property="og:site_name" content="绫沫猫猫冲">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png">
+<meta property="article:author" content="绫沫Yokina">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png"><link rel="shortcut icon" href="/./img/favicon.png"><link rel="canonical" href="http://blog.yokinanya.icu/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '绫沫猫猫冲',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/yokinanya/NyaBlog-Resource@master/css/heimu.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yokinanya/NyaBlog-Resource@master/css/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4378889_v8toy6dmx3m.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-color: #efefef;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/How-To-Ask-Questions"><span> 提问的智慧</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/bot/"><span> 星泠</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">绫沫猫猫冲</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/How-To-Ask-Questions"><span> 提问的智慧</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/bot/"><span> 星泠</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">绫沫猫猫冲</h1></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/heimu/" title="萌娘百科上的黑幕实现">萌娘百科上的黑幕实现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-12-25T15:29:30.342Z" title="更新于 2024-12-25 23:29:30">2024-12-25</time></span></div><div class="content">引用自 萌娘百科 MediaWiki:Gadget-site-styles.css在css中添加如下代码： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556/* 萌娘百科 “黑幕” *//* 以下内容引用自萌娘百科 https://zh.moegirl.org.cn/MediaWiki:Gadget-site-styles.css，感谢！ *//* MoeGirl Start */.heimu,.heimu rt &#123;  background-color: #252525;&#125;.heimu,.heimu a,a .heimu,a.new .heimu,span.heimu a.new,span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited,span.heimu...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/git-with-gpg/" title="GPG密钥的配置以及在Git中的使用">GPG密钥的配置以及在Git中的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-05-12T06:26:37.000Z" title="更新于 2024-05-12 14:26:37">2024-05-12</time></span></div><div class="content">安装与配置GPG 虽然Git自带GPG，但这里仍单独安装了GPG程序  Windows 用户可下载 Gpg4Win，Linux&#x2F;macOS 用户使用对应包管理软件安装即可。 安装完成后在Git配置gpg路径 1git config --global gpg.program &quot;C:\Program Files (x86)\GnuPG\bin\gpg.exe&quot;  创建与设置密钥建议参考 https://editst.com/2022/canokey-guide/#OpenPGP 生成并配置密钥，并且建议对密钥进行备份。如果有需要可以把密钥导入到智能卡内（如Canokey&#x2F;Yubikey），如果没有智能卡，在完成备份密钥后可以继续之后的操作。 需要注意：主密钥中的用户名，邮箱地址，需要和Github或其他Git平台中使用的一致，Comment仅为备注，可以留空 在Git中配置密钥在Git中添加密钥 1git config --global user.signingkey &lt;GPG key ID&gt; # GPG key...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/nakiri-bd-2023/" title="2023百鬼绫目生日应援巴士">2023百鬼绫目生日应援巴士</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-12-25T15:29:30.342Z" title="更新于 2024-12-25 23:29:30">2024-12-25</time></span></div><div class="content">25号晚上拍的，发B站被夹了（又放出来了），就放这里了，差不多晚上7点的时候跑过去的，在那等了一个半钟才等到PS:晚上啥都没吃就跑过去了，还好附近有个m记       </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/generate_204/" title="检测网络联通性&amp;generate_204服务汇总">检测网络联通性&amp;generate_204服务汇总</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-12-25T15:29:30.340Z" title="更新于 2024-12-25 23:29:30">2024-12-25</time></span></div><div class="content"> 本网页转载至 https://imldy.cn/posts/99d42f85 ，内容有删改     服务提供者 链接 http&#x2F;https IP...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/certbot/" title="用Certbot自动获取Let's Encrypt证书">用Certbot自动获取Let's Encrypt证书</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2024-09-20T02:34:11.000Z" title="更新于 2024-09-20 10:34:11">2024-09-20</time></span></div><div class="content">安装CertbotCertbot 团队建议使用 Snap 安装 Certbot ，以避免其他包管理系统上发行的 Cerbot 因为未及时更新而存在问题。 如果使用的是其他 Linux 发行版或者你使用的不是 Linux 可以查阅 certbot instructions，当然Certbot也可以通过 pip 安装，但并不建议使用该方式进行安装 下面以Ubuntu为例简单介绍一下Certbot的安装流程： 如果使用 apt、dnf 或 yum 等操作系统软件包管理器安装了任何 Certbot 软件包，应在安装 Certbot snap 之前删除它们，以确保运行 certbot 命令时使用的是 snap，而不是操作系统软件包管理器的安装。具体的命令视操作系统而定，常见的有 sudo apt-get remove certbot、sudo dnf remove certbot 或 sudo yum remove certbot。 123456# ubuntu可以直接通过apt安装snapsudo apt updatesudo apt install snapdsudo snap...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/minecraft-modpacket/" title="Minecraft Fabric 生电向整合包">Minecraft Fabric 生电向整合包</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2023-12-18T09:23:03.000Z" title="更新于 2023-12-18 17:23:03">2023-12-18</time></span></div><div class="content">简介这是一个Minecraft整合包合集页面，包含从1.18.2起由我打包的各类整合包，以生电向mod为主整合包一般都会包含以下mod，无特殊情况不再重复描述：   展开mod列表      mod名称 下载地址    AppleSkin Curseforge &#x2F; Modrinth   Architectury Curseforge &#x2F; Modrinth   Auth Me Curseforge &#x2F; Modrinth   AutoFish Curseforge   Bad Packets Curseforge &#x2F; Modrinth   Better Beds Curseforge &#x2F; Modrinth   CIT Resewn Curseforge &#x2F; Modrinth   Carpet Mod Curseforge &#x2F; Modrinth   Carpet Extra Curseforge &#x2F; Modrinth   Carpet TCTC Addition Curseforge &#x2F;...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">绫沫Yokina</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/yokinanya" target="_blank" title="Github"><i class="iconfont icon-github-fill" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/30231981" target="_blank" title="哔哩哔哩"><i class="iconfont icon-bilibili-fill" style="color: #00a0d8;"></i></a><a class="social-icon" href="https://www.youtube.com/@yokinanya" target="_blank" title="Youtube"><i class="iconfont icon-youtube-fill" style="color: #ff0000;"></i></a><a class="social-icon" href="https://discord.gg/ZAQYe3xgyj" target="_blank" title="Discord"><i class="iconfont icon-discord-fill" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/heimu/" title="萌娘百科上的黑幕实现">萌娘百科上的黑幕实现</a><time datetime="2024-12-22T15:38:45.000Z" title="发表于 2024-12-22 23:38:45">2024-12-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/git-with-gpg/" title="GPG密钥的配置以及在Git中的使用">GPG密钥的配置以及在Git中的使用</a><time datetime="2024-05-12T06:26:37.000Z" title="发表于 2024-05-12 14:26:37">2024-05-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/nakiri-bd-2023/" title="2023百鬼绫目生日应援巴士">2023百鬼绫目生日应援巴士</a><time datetime="2023-12-27T15:14:16.000Z" title="发表于 2023-12-27 23:14:16">2023-12-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/generate_204/" title="检测网络联通性&amp;generate_204服务汇总">检测网络联通性&amp;generate_204服务汇总</a><time datetime="2023-07-28T04:31:11.000Z" title="发表于 2023-07-28 12:31:11">2023-07-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/certbot/" title="用Certbot自动获取Let's Encrypt证书">用Certbot自动获取Let's Encrypt证书</a><time datetime="2023-07-03T13:40:29.000Z" title="发表于 2023-07-03 21:40:29">2023-07-03</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/minecraft/" style="font-size: 1.1em; color: #999">minecraft</a> <a href="/tags/canokey/" style="font-size: 1.1em; color: #999">canokey</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/gpg/" style="font-size: 1.1em; color: #999">gpg</a> <a href="/tags/%E7%99%BE%E9%AC%BC%E3%81%82%E3%82%84%E3%82%81/" style="font-size: 1.1em; color: #999">百鬼あやめ</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/05/">
+            <span class="card-archive-list-date">
+              五月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/12/">
+            <span class="card-archive-list-date">
+              十二月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/07/">
+            <span class="card-archive-list-date">
+              七月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-07T06:56:18.247Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 绫沫Yokina</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
