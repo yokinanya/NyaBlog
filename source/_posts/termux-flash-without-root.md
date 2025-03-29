@@ -43,5 +43,6 @@ pkg install root-repo
 cd ~/storage/downloads/rom/
 ```
 5. 执行 `termux-fastboot flash boot boot.img` 刷入boot文件，同理，执行 `termux-fastboot flash recovery recovery.img` 刷入recovery，如果需要刷入刷机包，需要编辑对应的刷机脚本，如 flash_all.sh ，替换其中的 `fastboot` 为 `termux-fastboot` 然后执行，`bash ./flash_all.sh` 刷机，在此期间，可能会出现如下图所示弹窗，确认即可
-![](https://cdn.jsdelivr.net/gh/yokinanya/NyaBlog-Resource@master/images/termux/04.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yokinanya/NyaBlog-Resource@master/images/termux/04.jpg" height="600">
+
 6. 不出意外的话应该没什么意外
