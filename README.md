@@ -1,5 +1,5 @@
 本仓库为博客源码文件
-博客地址 https://blog.yokinanya.icu
+博客地址 https://blog.ruau.top
 
 ## 关于开源协议
 文章内容采用 CC BY-NC-SA 4.0 协议，代码部分使用WTFPL协议。

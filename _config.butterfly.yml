@@ -236,7 +236,7 @@ aside:
       enable: false
       icon: fas fa-envelope
       text: 提问箱 | Dreamail
-      link: https://www.yokinanya.icu/askbox
+      link: https://www.ruau.top/askbox
   card_announcement:
     enable: false
     content: This is my Blog
@@ -459,7 +459,7 @@ valine:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: https://waline.yokinanya.icu/ # Waline server address url
+  serverURL: https://waline.ruau.top/ # Waline server address url
   bg: # waline background
   pageview: false
   option:
