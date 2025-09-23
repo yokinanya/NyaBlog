@@ -35,21 +35,21 @@ code_word_wrap: true
 # formal:
 #   icon: link || the description || color
 social:
-  iconfont icon-github-fill: https://github.com/yokinanya || Github || '#24292e'
-  iconfont icon-bilibili-fill: https://space.bilibili.com/30231981 || 哔哩哔哩 || '#00a0d8'
-  iconfont icon-youtube-fill: https://www.youtube.com/@yokinanya || Youtube || '#ff0000'
-  iconfont icon-discord-fill: https://discord.gg/ZAQYe3xgyj || Discord || '#24292e'
+  # iconfont icon-github-fill: https://github.com/yokinanya || Github || '#24292e'
+  # iconfont icon-bilibili-fill: https://space.bilibili.com/30231981 || 哔哩哔哩 || '#00a0d8'
+  # iconfont icon-youtube-fill: https://www.youtube.com/@yokinanya || Youtube || '#ff0000'
+  # iconfont icon-discord-fill: https://discord.gg/ZAQYe3xgyj || Discord || '#24292e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
 # Image (图片设置)
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: ./img/favicon.png
+favicon: https://home.yokina.moe/favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://s2.loli.net/2023/12/18/eu1UXQFMKr3YgJt.png
+  img: https://home.yokina.moe/assets/avatar.jpg
   effect: false
 
 # Disable all banner image
@@ -236,7 +236,7 @@ aside:
       enable: false
       icon: fas fa-envelope
       text: 提问箱 | Dreamail
-      link: https://www.ruau.top/askbox
+      link: https://go.yokina.moe/askbox
   card_announcement:
     enable: false
     content: This is my Blog

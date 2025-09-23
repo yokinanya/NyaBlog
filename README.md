@@ -4,7 +4,7 @@
 
 ## 📖 关于
 
-这是 [绫沫猫猫冲](https://blog.ruau.top) 博客的源代码仓库。
+这是 [绫沫猫猫冲](https://blog.yokina.moe) 博客的源代码仓库。
 
 
 ## 📄 许可证
