@@ -1,7 +1,7 @@
 ---
 title: '通过 leaflow 部署 VTsuruEventFetcher'
 date: 2025-11-16 17:15:30
-updated: 2025-11-16 17:15:30
+updated: 2025-11-16 17:34:07
 tags: ['leaflow']
 copyright: false
 ---
@@ -42,7 +42,7 @@ init_containers: []
 ```
 其中:
 
-**{token} 需要替换为从本站 面板 处获取的那串**
+**{token} 需要替换为从<vtsuru.live> 面板 处获取的那串**
 
 **{key@password} 替换为 CookieCloud 的 Key + @ + 端到端密码, 详见 [关于 CookieCloud](https://www.wolai.com/8XYEoE1UxxXou6WsxfTjTw)**
 
